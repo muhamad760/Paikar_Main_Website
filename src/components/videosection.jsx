@@ -4,7 +4,7 @@ import '../videosection.css';
 const Videosection = ({ bucketName, folderPath }) => {
   const [videos, setVideos] = useState([]);
   const [popupVideo, setPopupVideo] = useState(null);
-  const [popupVideoType, setPopupVideoType] = useState(null); // Store the type of video (vertical/horizontal)
+  // Store the type of video (vertical/horizontal)
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -43,7 +43,6 @@ const Videosection = ({ bucketName, folderPath }) => {
 
   const closePopup = () => {
     setPopupVideo(null);
-    setPopupVideoType(null);
   };
 
   return (
