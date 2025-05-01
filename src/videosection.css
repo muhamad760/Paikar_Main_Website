@@ -1,0 +1,111 @@
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+    margin-top: 100px;
+  }
+  
+  .video-card {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Max width for larger videos */
+    margin: 20px 0px;
+    margin-bottom: 80px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .right-video {
+    flex-direction: row-reverse; /* Position video on right */
+  }
+  
+  .left-video {
+    flex-direction: row; /* Position video on left */
+  }
+  
+  .video-preview {
+    height: auto;
+    max-height: 500px; /* Keep height reasonable */
+    object-fit: contain; /* Preserve aspect ratio */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .video-name {
+    margin-top: 300px;
+    margin-left:20px;
+    margin-right:20px;
+    color: darkred;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  /* Styles for the popup video */
+  .video-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .video-popup-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+  }
+  
+  /* Horizontal video popup size */
+  .video-popup-player {
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    background: black;
+  }
+  
+  /* Vertical video popup size */
+  .video-popup-player.vertical {
+    max-height: 90vh;
+    height: 90vh;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Specific adjustments for horizontal and vertical videos */
+  .video-preview.horizontal {
+    width: 60%; /* Make horizontal videos larger */
+  }
+  
+  .video-preview.vertical {
+    width: 40%; /* Make vertical videos smaller */
+  }
+  
+  @media (max-width: 768px) {
+    .video-card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .video-preview {
+      max-height: 400px; /* Adjust height for small screens */
+    }
+  }
+  

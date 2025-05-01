@@ -1,0 +1,102 @@
+/* src/pages/home.css */
+
+/* Remove any default margin or padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.home-wrapper {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensure the wrapper takes up full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire screen */
+  z-index: -1; /* Keep video in the background */
+}
+
+.intro-text {
+  position: absolute;
+  top: 65%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 1;
+  animation: fadeIn 2s ease-in-out forwards, fadeOut 2s ease-in-out 2s forwards;
+}
+
+.worksection-container {
+  position: absolute; /* Make WorkSection absolute */
+  top: 135vh; /* Push WorkSection below the video */
+  width: 100%;
+  padding: 50px 20px;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 1; /* Ensure it's above the video */
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-97%);
+  }
+}
+
+.intro-description {
+  position: absolute;
+  top: 105%; /* Place below the video */
+  left: 50%;
+  transform: translate( -97%);
+  text-align:left; /* Align text to the left */
+  font-size: 2.0rem;
+  font-weight: bold;
+  color:darkred;
+  padding: 30px;
+  animation: fadeIn 5s ease-in-out forwards, slideInFromLeft 1s ease-out forwards;
+}
+
+.intro-text.visible {
+  visibility: visible; /* Make it visible when the animation is triggered */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

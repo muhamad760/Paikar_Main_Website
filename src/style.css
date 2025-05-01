@@ -1,0 +1,226 @@
+/* src/styles.css */
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Fullscreen video fix */
+  .fullscreen-video {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  }
+
+ /* Make sure navbar stays on top-right */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: transparent;
+  }
+  
+  .navbar-home {
+    background-color: transparent;
+    color: white; /* white for the home page */
+  }
+  
+  .navbar-other {
+    background-color: transparent;
+    color: darkred; /* dark red for other pages */
+  }
+  /* Style the nav links */
+  .nav-links {
+    display: flex; /* Align links horizontally */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .navbar-logo img {
+    height: 25px;
+    cursor: pointer;
+  }
+  
+  /* Style each link */
+  .nav-links li {
+    padding: 10px 20px;
+  }
+  
+  .nav-links a {
+    color: white; /* White text for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: inherit;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  /* Style the dropdown button */
+  .dropbtn {
+    background: transparent;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 4px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(0,0,0,0.5);
+    min-width: 160px;
+    z-index: 1;
+    padding: 0px; /* Remove padding around the dropdown */
+    left: 0; /* Align dropdown to the left side */
+    margin: 5px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content li {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  .dropdown-content li a {
+    display: block;
+    width: 100%;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Hover effect */
+  .dropdown-content li a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Basic page styling */
+  .container {
+    padding: 20px;
+  }
+  
+  .about-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .about-video {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Push to the far left */
+    padding: 0;
+    margin-top: 20px;
+    margin-right:40px;
+  }
+  
+  .about-video video {
+    height: 90%;
+    width: auto;
+    object-fit: contain;
+    margin-left: 0;
+    border-radius: 0; /* Optional: remove border radius if undesired */
+  }
+  
+  .about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  .about-text h2 {
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 0;
+    background-color: white;
+    overflow-x: hidden;
+  }
+  
+  .contact-info h2 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+    margin-top:10px;
+  }
+  
+  .contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-top:10px;
+  }
+  
+  .contact-info a {
+    font-size: 1.1rem;
+    color: #d32f2f;
+    text-decoration: none;
+    margin-top:10px;
+  }
+  
+  .contact-image-container {
+    margin-top: 200px;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .contact-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(-30%);
+    transition: transform 1s ease;
+  }
+  
+  /* When user scrolls to image, expand it */
+  .contact-image-container.in-view .contact-image {
+    transform: translateY(0);
+  }
+  
