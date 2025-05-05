@@ -36,12 +36,11 @@ html, body {
 
 .intro-text {
   position: absolute;
-  top: 65%;
-  left: 25%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 2.5rem;
-  font-weight: bold;
   text-align: center;
   opacity: 1;
   animation: fadeIn 2s ease-in-out forwards, fadeOut 2s ease-in-out 2s forwards;
@@ -98,5 +97,35 @@ html, body {
   }
   100% {
     opacity: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .fullscreen-video {
+    object-fit: contain;       /* Prevent cropping */
+    width: 100vw;              /* Full viewport width */
+    height: 100vh;             /* Full viewport height */
+  }
+
+  .intro-text {
+    font-size: 1.4rem;
+    padding: 0 15px;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+
+  .intro-description {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    top: 115%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+
+  .worksection-container {
+    top: 160vh;                /* Previously 180vh, now moved up */
+    padding: 40px 20px;
   }
 }

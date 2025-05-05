@@ -35,13 +35,13 @@
   }
   
   .video-name {
-    margin-top: 300px;
     margin-left:20px;
     margin-right:20px;
-    color: darkred;
-    font-weight: bold;
-    font-size: 2rem;
+    color: darkgray;
+    font-weight:600;
+    font-size: 1.6rem;
     text-align: center;
+    align-self: flex-end;
   }
   
   /* Styles for the popup video */
@@ -101,11 +101,46 @@
   @media (max-width: 768px) {
     .video-card {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+      padding: 10px 20px;
+      margin: 40px 0;
+    }
+  
+    .video-name {
+      font-size: 1.1rem;
+      margin-bottom: 0px;
+      margin-top:10px;
+      text-align: left;
+      color: darkgray;
+      font-weight: 600;
+      align-self: flex-start;
     }
   
     .video-preview {
-      max-height: 400px; /* Adjust height for small screens */
+      width: 90%;
+      max-height: 300px;
+      object-fit: contain;
+      align-self: center;
+    }
+  
+    .video-preview.horizontal {
+      width: 100%;
+    }
+  
+    .video-preview.vertical {
+      width: 70%;
+    }
+  
+    .video-popup-player {
+      max-width: 90vw;
+      max-height: 80vh;
+    }
+  
+    .video-popup-player.vertical {
+      height: 80vh;
+      width: auto;
     }
   }
+  
+  
   

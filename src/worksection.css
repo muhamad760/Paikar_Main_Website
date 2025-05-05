@@ -52,9 +52,10 @@
 }
 
 .popup-content {
-  background: transparent; /* No background! */
+  background: white; /* No background! */
   padding: 0; /* No padding! */
   text-align: center;
+  border: 8px solid white;
 }
 
 .popup-image {
@@ -62,7 +63,7 @@
   max-height: 80vh;
   width: auto;
   height: auto;
-  border: 8px solid white; /* Only this frame remains */
+   /* Only this frame remains */
   object-fit: contain;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -70,8 +71,8 @@
 .popup-name {
   margin-top: 10px;
   font-size: 18px;
-  color: white; /* White text looks better on dark background */
-  font-weight: bold;
+  color: darkgrey; /* White text looks better on dark background */
+  font-weight:600;
 }
 
 

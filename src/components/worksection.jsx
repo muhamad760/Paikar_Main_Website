@@ -12,16 +12,29 @@ const WorkSection = ({ bucketName, folderPath }) => {
         const response = await axios.get(
           `https://storage.googleapis.com/storage/v1/b/${bucketName}/o?prefix=${folderPath}/`
         );
-        const imageList = response.data.items;
+  
+        let imageList = response.data.items;
+  
+        // Sort the files by their numeric prefix (like 01-, 02-, etc.)
+        imageList.sort((a, b) => {
+          const getNumberPrefix = (name) => {
+            const filename = name.split('/').pop(); // "01-image.jpg"
+            const match = filename.match(/^(\d+)/); // ["01", "01"]
+            return match ? parseInt(match[1], 10) : 0;
+          };
+  
+          return getNumberPrefix(a.name) - getNumberPrefix(b.name);
+        });
+  
         setImages(imageList);
       } catch (error) {
         console.error('Error fetching images:', error);
       }
     };
-
+  
     fetchImages();
   }, [bucketName, folderPath]);
-
+  
   const getCleanName = (name) => {
     // Remove folder path first
     const filename = name.split('/').pop();
