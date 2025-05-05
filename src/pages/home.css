@@ -125,7 +125,7 @@ html, body {
   }
 
   .worksection-container {
-    top: 160vh;                /* Previously 180vh, now moved up */
+    top: 140vh;                /* Previously 180vh, now moved up */
     padding: 40px 20px;
   }
 }
