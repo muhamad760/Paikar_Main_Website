@@ -37,11 +37,13 @@
   .video-name {
     margin-left:20px;
     margin-right:20px;
-    color: darkgray;
-    font-weight:600;
+    color:rgb(99,99,99);
+      font-family: "roboto", sans-serif;
+      font-weight: 300;
     font-size: 1.6rem;
     text-align: center;
     align-self: flex-end;
+    margin-bottom: 15px;
   }
   
   /* Styles for the popup video */
@@ -108,11 +110,12 @@
   
     .video-name {
       font-size: 1.1rem;
-      margin-bottom: 0px;
-      margin-top:10px;
-      text-align: left;
-      color: darkgray;
-      font-weight: 600;
+      
+      text-align: justify;
+      color:rgb(59,59,59);
+      margin: 15px auto;
+      font-family: "roboto", sans-serif;
+      font-weight: 200;
       align-self: flex-start;
     }
   

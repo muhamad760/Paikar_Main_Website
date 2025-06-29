@@ -40,15 +40,19 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 2.5rem;
+  font-size: 3.7rem;
+  letter-spacing: 0.5rem;
   text-align: center;
+   font-family: "roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
   opacity: 1;
   animation: fadeIn 2s ease-in-out forwards, fadeOut 2s ease-in-out 2s forwards;
 }
 
 .worksection-container {
   position: absolute; /* Make WorkSection absolute */
-  top: 135vh; /* Push WorkSection below the video */
+  top: 165vh; /* Push WorkSection below the video */
   width: 100%;
   padding: 50px 20px;
   background-color: white;
@@ -67,14 +71,15 @@ html, body {
 
 .intro-description {
   position: absolute;
-  top: 105%; /* Place below the video */
-  left: 50%;
+  top: 115%; /* Place below the video */
+  left: 1225px;
+  width: 80%;
   transform: translate( -97%);
   text-align:left; /* Align text to the left */
-  font-size: 2.0rem;
+  font-size: 4.0rem;
   font-weight: bold;
   color:darkred;
-  padding: 30px;
+  padding: 0px;
   animation: fadeIn 5s ease-in-out forwards, slideInFromLeft 1s ease-out forwards;
 }
 
